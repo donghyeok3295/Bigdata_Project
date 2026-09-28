@@ -1,0 +1,16 @@
+﻿# 원본 / 정제 데이터
+raw/
+work/
+*.csv
+*.xlsx
+*.parquet
+
+# 파이썬
+__pycache__/
+.ipynb_checkpoints/
+.env
+venv/
+
+# 윈도우
+Thumbs.db
+desktop.ini
