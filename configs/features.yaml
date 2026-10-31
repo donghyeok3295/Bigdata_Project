@@ -1,0 +1,13 @@
+activity_window_min: 60
+cong_night_fill: 1.0
+
+base_features:
+  categorical: [center_id, sgg]
+  numeric: [hour, dow, month, is_holiday, out_of_jur]
+  distance: dist_km
+
+unit_type_keywords:
+  center: 안전센터
+  field_unit: 현장대응단
+  rescue: 구조대
+  default: other

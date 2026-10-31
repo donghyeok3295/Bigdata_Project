@@ -1,0 +1,54 @@
+paths:
+  raw_ems: raw/ems
+  raw_speed: raw/speed
+  raw_ref: raw/ref
+  work: work
+  results: results
+
+late_threshold_min: 8
+error_cap_min: 180
+dist_out_of_range_km: 6
+cbk_max_hours: 12
+cbk_min_coverage: 0.9
+
+seed: 42
+
+split_years:
+  train: [2019, 2022]
+  valid: [2023, 2023]
+  calib: [2024, 2024]
+  test: [2025, 2025]
+
+weather:
+  raw_dir: raw/weather
+  out: work/weather/asos108_hourly.parquet
+  station: 108
+  winter_months: [11, 12, 1, 2, 3]
+  winter_interval_h: 3
+  publish_delay_min: 60
+
+dist_error_max_km: 100
+splits_dir: data/splits
+base_dir: work/base_v1
+holidays: configs/holidays_kr.yaml
+ref_center_sgg: work/ref/center_to_sgg.parquet
+models_dir: models
+freeze_tag: freeze-v1
+
+export:
+  cohort_path: /clean/ems_cohort
+  out_train: file:///home/insuham/bigdata/team-work/donghyeok/base_v1
+  out_test: file:///home/insuham/bigdata/team-work/donghyeok/base_v1_test
+  test_year: 2025
+  session_timezone: Asia/Seoul
+  source_cols:
+    call_id: rlf_rptp_no
+    dclr_ts: dclr
+    center_id: center_id
+    cntr_nm: cntr_nm
+    sgg: sgg_nm
+    dist_raw: dist_km
+    resp_min: resp_min
+    late_srv: late
+    unit_type_srv: unit_type
+    distance_invalid: distance_invalid

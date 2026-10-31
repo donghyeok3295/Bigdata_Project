@@ -1,0 +1,25 @@
+[project]
+name = "ems-risk"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "pyyaml",
+    "scikit-learn",
+    "lightgbm",
+]
+
+[project.optional-dependencies]
+spark = ["pyspark==3.5.*"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["coursework", "notebooks", "mockup", "lecture"]
