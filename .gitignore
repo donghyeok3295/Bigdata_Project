@@ -1,6 +1,8 @@
-﻿# 원본 / 정제 데이터
+﻿# 원본 / 정제 데이터, 분할 데이터, 학습된 모델
 raw/
 work/
+data/
+models/
 *.csv
 *.xlsx
 *.parquet
@@ -14,3 +16,9 @@ venv/
 # 윈도우
 Thumbs.db
 desktop.ini
+
+# 기업튜터링 (튜터링 제출물·서식·사진, 저장소에 올리지 않음)
+기업튜터링/
+
+# 강의 자료 (교수님 배포 PDF·개인 공부용)
+lecture/
